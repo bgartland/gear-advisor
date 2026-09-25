@@ -11,6 +11,7 @@ function App() {
   const { products, status, error, retry } = useProducts()
   const [query, setQuery] = useState('')
   const [selectedIds, setSelectedIds] = useState<Set<string | number>>(new Set())
+  const [adventure, setAdventure] = useState('')
   const abortRef = useRef<AbortController | null>(null)
 
   const filtered = useMemo(() => {
@@ -98,6 +99,8 @@ function App() {
           return { id, title: p?.title || String(id), image: p?.image }
         })}
         max={MAX_SELECTED}
+        adventure={adventure}
+        onAdventureChange={setAdventure}
         onDeselect={handleDeselect}
       />
     </div>
