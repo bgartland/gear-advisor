@@ -1,11 +1,24 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import SearchBar from './components/SearchBar'
+import useProducts from './hooks/useProducts'
 
 function App() {
   const [count, setCount] = useState(0)
+  const { products, status } = useProducts()
+  const [query, setQuery] = useState('')
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    if (!q) return products
+    return products.filter((p) => {
+      const hay = [p.title, p.productType, p.description].filter(Boolean).join(' ').toLowerCase()
+      return hay.includes(q)
+    })
+  }, [products, query])
 
   return (
     <>
@@ -20,6 +33,10 @@ function App() {
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
+          <SearchBar query={query} onChange={setQuery} count={filtered.length} />
+          <div>
+            <strong>Status:</strong> {status}
+          </div>
         </div>
         <button
           type="button"

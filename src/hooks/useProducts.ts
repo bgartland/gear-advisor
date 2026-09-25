@@ -37,7 +37,17 @@ export default function useProducts() {
         : Array.isArray(data?.products)
         ? data.products
         : [];
-      setProducts(list as Product[]);
+      // attempt to map minimal fields to our Product shape if needed
+      const mapped = (list as any[]).map((p) => ({
+        id: p.id,
+        title: p.title || '',
+        productType: p.product_type || p.type || undefined,
+        price: p.price || undefined,
+        image: p.image || p.images?.[0]?.src || undefined,
+        description: p.body_html || undefined,
+        bestseller: (p.tags || '').toLowerCase().includes('bestseller')
+      }))
+      setProducts(mapped as Product[]);
       setStatus('success');
     } catch (err: any) {
       if (err.name === 'AbortError') return;
