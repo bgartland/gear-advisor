@@ -8,6 +8,7 @@
   --color-accent: #c1502e;
   --color-accent-hover: #a63f22;
   --color-success: #4a7c59;
+  --color-on-accent: #ffffff;
 
   /* Type */
   --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -25,7 +26,9 @@
   --space-5: 2rem;
 
   --radius: 8px;
+  --radius-sm: 6px;
   --focus-ring: 0 0 0 3px rgba(193, 80, 46, 0.35);
+  --shadow-tray: 0 -2px 8px rgba(0, 0, 0, 0.06);
 
   color-scheme: light;
   font-family: var(--font-body);

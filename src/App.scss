@@ -60,7 +60,7 @@ $content-width: 1120px;
   border: 1px solid var(--color-accent);
   border-radius: var(--radius);
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
   font-weight: 600;
   cursor: pointer;
 
@@ -202,7 +202,7 @@ $content-width: 1120px;
     height: 1.75rem;
     border-radius: 50%;
     background: var(--color-accent);
-    color: #fff;
+    color: var(--color-on-accent);
     font-size: var(--font-size-sm);
     font-weight: 700;
   }
@@ -255,7 +255,7 @@ $content-width: 1120px;
   z-index: 10;
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-tray);
 
   .tray-inner {
     max-width: $content-width;
@@ -279,6 +279,9 @@ $content-width: 1120px;
     padding: 0;
     list-style: none;
     overflow-x: auto;
+    // room for focus rings, which the scroll container would otherwise clip
+    padding: var(--space-1);
+    margin: calc(-1 * var(--space-1));
   }
 
   .tray-item {
@@ -288,8 +291,20 @@ $content-width: 1120px;
     min-width: 0;
     flex: 0 1 240px;
 
+    // Phone: names don't fit, so show thumbnail + Remove only.
+    // The full name stays in the Remove button's aria-label.
     @media (max-width: $bp-phone) {
-      flex-basis: 180px;
+      flex: 0 0 auto;
+      flex-direction: column;
+      align-items: center;
+
+      .tray-title {
+        display: none;
+      }
+
+      .tray-meta {
+        align-items: center;
+      }
     }
 
     img {
@@ -298,7 +313,7 @@ $content-width: 1120px;
       flex-shrink: 0;
       object-fit: cover;
       border: 1px solid var(--color-border);
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
     }
   }
 
