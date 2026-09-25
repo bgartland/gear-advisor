@@ -31,28 +31,26 @@ export default function useProducts() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       if (!mountedRef.current) return;
-      // If the JSON is a Shopify-style feed with `products`, try to normalize a bit
-      const list: Product[] = Array.isArray(data)
-        ? data
-        : Array.isArray(data?.products)
-        ? data.products
-        : [];
-      // attempt to map minimal fields to our Product shape if needed
-      const mapped = (list as any[]).map((p) => ({
-        id: p.id,
-        title: p.title || '',
-        productType: p.product_type || p.type || undefined,
-        price: p.price || undefined,
-        image: p.image || p.images?.[0]?.src || undefined,
-        description: p.body_html || undefined,
-        bestseller: (p.tags || '').toLowerCase().includes('bestseller')
-      }))
-      setProducts(mapped as Product[]);
+      // products.json is already normalized to the Product shape (see NOTES.md),
+      // so read those fields directly rather than raw Shopify names like body_html.
+      const list: Partial<Product>[] = Array.isArray(data) ? data : [];
+      const mapped: Product[] = list
+        .filter((p): p is Partial<Product> & Pick<Product, 'id'> => p?.id != null)
+        .map((p) => ({
+          id: p.id,
+          title: p.title ?? '',
+          productType: p.productType,
+          price: typeof p.price === 'number' ? p.price : undefined,
+          image: p.image,
+          description: p.description,
+          bestseller: p.bestseller === true,
+        }));
+      setProducts(mapped);
       setStatus('success');
-    } catch (err: any) {
-      if (err.name === 'AbortError') return;
+    } catch (err) {
+      if (err instanceof DOMException && err.name === 'AbortError') return;
       if (!mountedRef.current) return;
-      setError(err.message || String(err));
+      setError(err instanceof Error ? err.message : String(err));
       setStatus('error');
     }
   }, []);
