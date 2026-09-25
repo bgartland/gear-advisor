@@ -32,7 +32,8 @@ type Criterion = {
 const CRITERIA: Criterion[] = [
   {
     key: 'warmth',
-    triggers: ['warm', 'cold', 'freez', 'chill', 'winter', 'frigid', 'snow', 'ski', 'cozy', 'insulat', 'down', 'fleece', 'camp', 'bonfire', 'alpine'],
+    // bare "warm" is left out on purpose: "warm conditions" describes the weather, not a need
+    triggers: ['warmth', 'stay warm', 'keep warm', 'keep me warm', 'warmer', 'cold', 'freez', 'chill', 'winter', 'frigid', 'snow', 'ski', 'cozy', 'insulat', 'down jacket', 'puffer', 'fleece', 'bonfire', 'alpine'],
     features: { down: 2, insulat: 2, primaloft: 2, fill: 2, puffer: 1, fleece: 1, warm: 1, cozy: 1, winter: 1 },
     need: 'staying warm',
     benefit: "it'll actually hold heat when the temperature drops",
@@ -40,7 +41,7 @@ const CRITERIA: Criterion[] = [
   },
   {
     key: 'weather',
-    triggers: ['rain', 'wet', 'storm', 'wind', 'snow', 'shower', 'drizzl', 'weather', 'waterproof', 'damp', 'mist', 'coast', 'thunder'],
+    triggers: ['rain', 'downpour', 'pour', 'wet', 'storm', 'wind', 'snow', 'shower', 'drizzl', 'weather', 'waterproof', 'damp', 'mist', 'coast', 'thunder'],
     features: { waterproof: 2, seam: 2, rain: 2, storm: 2, thunder: 2, '3l': 2, dwr: 1, 'water-resistant': 1, 'weather-resistant': 1, wind: 1, weather: 1, shower: 1, element: 1, snow: 1 },
     need: 'wet or windy weather',
     benefit: "it'll keep you dry when the weather turns",
@@ -48,7 +49,7 @@ const CRITERIA: Criterion[] = [
   },
   {
     key: 'sun',
-    triggers: ['sun', 'upf', 'uv', 'hot', 'heat', 'desert', 'bright', 'beach', 'tropic', 'summer', 'humid'],
+    triggers: ['sun', 'upf', 'spf', 'uv', 'hot', 'heat', 'desert', 'bright', 'beach', 'tropic', 'summer', 'humid', 'warm conditions', 'warm weather', 'warm day', 'warm temp', 'warm climate'],
     features: { upf: 2, uv: 2, sun: 1 },
     need: 'long hours in the sun',
     benefit: 'it keeps the sun off your skin without making you overheat',
@@ -67,13 +68,28 @@ const CRITERIA: Criterion[] = [
 const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 const wordStart = (term: string) => new RegExp(`\\b${escapeRegExp(term)}`, 'i')
 
-const triggerMatchers = new Map(CRITERIA.map((c) => [c.key, c.triggers.map(wordStart)]))
+const triggerMatchers = new Map(CRITERIA.map((c) => [c.key, c.triggers.map((t) => new RegExp(wordStart(t).source, 'gi'))]))
 const featureMatchers = new Map(
   CRITERIA.map((c) => [c.key, Object.entries(c.features).map(([term, weight]) => ({ re: wordStart(term), weight }))]),
 )
 
+// "little chance of rain", "no wind", "not cold": a negator shortly before a trigger in the
+// same clause cancels it. Clauses split on punctuation, "but", and "and", so
+// "no rain, need to pack light" still activates packability.
+const NEGATOR = /\b(no|not|without|unlikely|zero|minimal|never|barely|hardly|low|little|don'?t|doesn'?t|won'?t|isn'?t)\b/i
+const CLAUSE_BREAK = /[,.;!?]|\bbut\b|\band\b/i
+
+function isNegated(textBefore: string): boolean {
+  const clause = textBefore.split(CLAUSE_BREAK).pop() ?? ''
+  const window = clause.trim().split(/\s+/).slice(-4).join(' ')
+  // "a little chilly" still means chilly
+  return NEGATOR.test(window) && !/\ba little$/i.test(window)
+}
+
 function isActive(userText: string, criterion: Criterion): boolean {
-  return triggerMatchers.get(criterion.key)!.some((re) => re.test(userText))
+  return triggerMatchers.get(criterion.key)!.some((re) =>
+    [...userText.matchAll(re)].some((m) => !isNegated(userText.slice(0, m.index))),
+  )
 }
 
 /** Sum of weights for the distinct feature terms found; 0 means no evidence. */
@@ -136,8 +152,11 @@ function writeReason(active: Criterion[], winner: Scored, runnerUp: Scored | und
   if (runnerUp) {
     const other = `the ${shortName(runnerUp.product)}`
     const edges = winner.matched.filter((c) => winner.strengths.get(c.key)! > (runnerUp.strengths.get(c.key) ?? 0))
-    if (edges.length > 0) {
-      sentences.push(`${other.charAt(0).toUpperCase()}${other.slice(1)} is a solid layer too, but I'd pick this one because ${joinList(edges.map((c) => c.edge))}.`)
+    const Other = other.charAt(0).toUpperCase() + other.slice(1)
+    if (edges.length > 0 && runnerUp.matched.length === 0) {
+      sentences.push(`${Other} is great for other trips, but it isn't built for ${joinList(edges.map((c) => c.need))}.`)
+    } else if (edges.length > 0) {
+      sentences.push(`${Other} is a solid layer too, but I'd pick this one because ${joinList(edges.map((c) => c.edge))}.`)
     } else if (winner.product.bestseller && !runnerUp.product.bestseller) {
       sentences.push(`It's a close call with ${other}, but this one's a customer favorite, and there's usually a reason for that.`)
       mentionedBestseller = true
