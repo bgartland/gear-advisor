@@ -46,7 +46,8 @@ as chilly), and "spf" and "sunscreen" count as sun. The same prompt now picks th
 
 A similar issue came up earlier. The first version recommended a down jacket over a fully
 waterproof shell for a rainy hike, because it treated a light water-resistant coating the same as
-waterproofing and then picked the cheaper one. That's why stronger features now count for more.
+waterproofing and then picked the cheaper one. That's why I now weight features: something like
+"waterproof" or "seam-sealed" counts more than "water-resistant."
 
 ## UI decision and tradeoff
 
@@ -79,8 +80,8 @@ it shows a smaller slice of the store.
 - **Staying in sync:** asked for a recommendation and then changed the search, changed the
   selection, or hit Clear all before it came back. In each case the late result never showed up,
   and when I asked again, the result matched what was actually selected.
-- **Loading:** slowed the product file down to confirm the "Loading gear…" state shows before
-  the products appear.
+- **Loading:** throttled the network in Chrome dev tools to confirm the "Loading gear…" state
+  shows before the products appear.
 - **Build:** the production build and type check pass, and the linter is clean.
 
 ## What's unfinished

@@ -26,7 +26,8 @@ type Criterion = {
 }
 
 // All terms match at the start of a word, so "rain" also catches "rainy" and "pack"
-// catches "packable", without "sun" matching inside unrelated words.
+// catches "packable", without "sun" matching inside unrelated words. Some terms are stems on
+// purpose ("insulat", "freez", "drizzl") so one entry covers every form of the word.
 // Weights encode general gear knowledge (a seam-sealed shell beats a DWR finish in rain),
 // not anything about specific products.
 const CRITERIA: Criterion[] = [
@@ -178,6 +179,7 @@ function writeReason(active: Criterion[], winner: Scored, runnerUp: Scored | und
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export async function getRecommendation(products: Product[], userText: string): Promise<Recommendation> {
+  // Mock latency and random failures so it feels real and exercises the loading and error states.
   await sleep(600 + Math.random() * 900)
 
   if (Math.random() < 0.12) {
