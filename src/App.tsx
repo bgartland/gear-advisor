@@ -32,16 +32,24 @@ function App() {
     [products, selectedIds],
   )
 
+  // Each request takes a new id; only the latest one may touch state. Without this,
+  // a slow earlier response could overwrite a newer result, or flip loading off
+  // while the newer request is still running.
+  const recRequestIdRef = useRef(0)
+
   async function handleRecommend() {
+    const id = ++recRequestIdRef.current
     setRecLoading(true)
     setRecError(null)
     try {
       const result = await getRecommendation(selectedProducts, adventure)
-      setRecommendation(result)
+      if (id === recRequestIdRef.current) setRecommendation(result)
     } catch (err) {
-      setRecError(err instanceof Error ? err.message : 'Something went wrong.')
+      if (id === recRequestIdRef.current) {
+        setRecError(err instanceof Error ? err.message : 'Something went wrong.')
+      }
     } finally {
-      setRecLoading(false)
+      if (id === recRequestIdRef.current) setRecLoading(false)
     }
   }
 
