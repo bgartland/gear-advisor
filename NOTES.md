@@ -152,15 +152,12 @@ away, even if the shopper never asks again. Cancelling the request with an `Abor
 would be the more complete fix, since it stops the work too, but the request-number check gets
 the same correct result with less code for this scope.
 
-**How I'd verify it.** By hand: ask for a recommendation, change the search before the spinner
-stops, and make sure nothing appears. Then ask for A, change the search, ask for B, and make sure
-the screen ends on B. As an automated test: use fake timers to give A a long delay and B a short
-one, let B finish and then A, and check that B's result is showing and the spinner is off.
-
-I also tested the fix by hand and with scripted browser checks: request a recommendation, then change
-the search, change the selection, or hit Clear all before it comes back. The late result never
-appeared, and the spinner and error cleared right away. Asking again gave a result that matched
-what was selected.
+**How I'd verify it.** I tested it by hand and with scripted browser checks: request a
+recommendation, then change the search, change the selection, or hit Clear all before it comes
+back. The late result never appeared, the spinner and error cleared right away, and asking again
+gave a result that matched what was selected. For an automated test, I'd use fake timers to give
+request A a long delay and B a short one, let B finish and then A, and check that B's result is
+showing and the spinner is off.
 
 **What else goes wrong with the loading indicator.** The original code turns the spinner off
 whenever *any* request finishes. If requests overlap, the older one finishing hides the spinner
