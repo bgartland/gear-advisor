@@ -66,15 +66,19 @@ export default function SelectionTray({
           <button type="submit" className="btn" disabled={loading} aria-busy={loading}>
             Recommend
           </button>
+          {loading && <span className="spinner" role="status" aria-label="Finding a recommendation" />}
         </form>
 
         <div aria-live="polite">
           {error && (
-            <p className="rec-error" role="alert">
-              {error}
-            </p>
+            <div className="rec-error" role="alert">
+              <span>{error}</span>
+              <button type="button" className="btn-link" onClick={onRecommend}>
+                Try again
+              </button>
+            </div>
           )}
-          {recommendation && !error && (
+          {recommendation && (
             <div className="recommendation">
               <span className="recommended-label">Recommended</span>
               <p className="rec-title">{recommendation.product.title}</p>
