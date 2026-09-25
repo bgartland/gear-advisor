@@ -80,9 +80,13 @@ export default function SelectionTray({
           )}
           {recommendation && (
             <div className="recommendation">
-              <span className="recommended-label">Recommended</span>
-              <p className="rec-title">{recommendation.product.title}</p>
-              <p className="rec-reason">{recommendation.reason}</p>
+              {/* decorative: the product name is right next to it */}
+              <img className="rec-image" src={recommendation.product.image} alt="" />
+              <div className="rec-body">
+                <span className="recommended-label">Recommended</span>
+                <p className="rec-title">{recommendation.product.title}</p>
+                <p className="rec-reason">{recommendation.reason}</p>
+              </div>
             </div>
           )}
         </div>

@@ -389,11 +389,33 @@ $content-width: 1120px;
 
   .recommendation {
     display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-    max-width: 65ch;
+    align-items: flex-start;
+    gap: var(--space-3);
     padding-top: var(--space-3);
     border-top: 1px solid var(--color-border);
+  }
+
+  .rec-image {
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+
+    @media (max-width: $bp-phone) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  .rec-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+    max-width: 65ch;
   }
 
   .rec-title {
