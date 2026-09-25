@@ -12,6 +12,7 @@ type Props = {
   loading: boolean
   error: string | null
   onDeselect: (id: string | number) => void
+  onClearAll: () => void
 }
 
 export default function SelectionTray({
@@ -24,14 +25,20 @@ export default function SelectionTray({
   loading,
   error,
   onDeselect,
+  onClearAll,
 }: Props) {
   if (!items.length) return null
   return (
     <aside className="selection-tray" aria-label="Selected products">
       <div className="tray-inner">
-        <p className="tray-count" aria-live="polite">
-          {items.length} of {max} selected
-        </p>
+        <div className="tray-header">
+          <p className="tray-count" aria-live="polite">
+            {items.length} of {max} selected
+          </p>
+          <button type="button" className="btn-link" onClick={onClearAll}>
+            Clear all
+          </button>
+        </div>
         <ul className="tray-items">
           {items.map((it) => (
             <li className="tray-item" key={it.id}>

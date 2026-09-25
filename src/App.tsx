@@ -84,6 +84,13 @@ function App() {
     [resetRecommendation],
   )
 
+  function handleClearAll() {
+    setSelectedIds(new Set())
+    resetRecommendation()
+    // the tray (and the button that had focus) disappears, so hand focus back to the top
+    document.getElementById('product-search')?.focus()
+  }
+
   const handleDeselect = useCallback(
     (id: string | number) => {
       setSelectedIds((prev) => {
@@ -145,6 +152,7 @@ function App() {
         loading={recLoading}
         error={recError}
         onDeselect={handleDeselect}
+        onClearAll={handleClearAll}
       />
     </div>
   )
