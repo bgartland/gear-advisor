@@ -86,6 +86,7 @@ function App() {
 
   function handleClearAll() {
     setSelectedIds(new Set())
+    setAdventure('')
     resetRecommendation()
     // the tray (and the button that had focus) disappears, so hand focus back to the top
     document.getElementById('product-search')?.focus()
