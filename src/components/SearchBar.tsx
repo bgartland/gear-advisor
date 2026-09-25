@@ -21,7 +21,7 @@ export default function SearchBar({ query, onChange, count }: Props) {
         onChange={(e) => onChange(e.target.value)}
         aria-describedby="search-count"
         aria-label="Search products"
-        placeholder="e.g. pack, jacket, tent"
+        placeholder="e.g. down, rain, fleece"
       />
       <div id="search-count" aria-hidden="true">
         {count} result{count === 1 ? '' : 's'}

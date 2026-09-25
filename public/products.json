@@ -1,110 +1,110 @@
 [
   {
-    "id": 7020155338813,
-    "title": "Fuego Down Pant - Men's",
-    "productType": "Insulation",
-    "price": 285.00,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/f26-m-fuego-down-pant-juniper-stripes-01-r.png?v=1787334945",
-    "description": "Great for winter bonfires, ice fishing at the lake, or any cold weather activity, the Fuego Down Pant is a playful new take on our quintessential insulation layer. Made with responsibly sourced 800-fill down and a water-resistant DWR-finished shell, this lightweight pant is one we love for winter wandering. Packs into the wearer's right pocket.",
+    "id": 7804256223293,
+    "title": "Fuego Down Hooded Jacket - Men's",
+    "productType": "Outerwear",
+    "price": 118.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F25MFuegoDownHoodedJacketBronzeandGold_002.png?v=1755722529",
+    "description": "Our iconic down jacket now features a 100% recycled DWR-finished shell and the same responsibly sourced 800-fill down you know and love. With an improved fit, this jacket is one you’ll never want to take it off. Fuego is the jacket we turn to year-round, from summer camping to winter wandering. A classic down jacket made from recycled fabric with year-round versatility. Packs into internal pocket.",
+    "bestseller": true
+  },
+  {
+    "id": 7804667232317,
+    "title": "Calidez Down Parka - Women's",
+    "productType": "Outerwear",
+    "price": 200.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F25WCalidezDownParkaCream_003.png?v=1755714171",
+    "description": "Take on the elements in style this winter with the Calidez Down Parka. Its waterproof shell and fully sealed seams lock in warmth and blocks out weather. The windproof design adds extra protection, while the fleece-lined hand pockets provide cozy warmth. With a removable hood, this jacket combines functionality with versatility for all your adventures in town and beyond. An everyday puffer made with responsibly sourced materials.",
+    "bestseller": true
+  },
+  {
+    "id": 7658702536765,
+    "title": "Repleto Down Jacket - Men's",
+    "productType": "Outerwear",
+    "price": 74.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F25MRepletoDownJacketFatigue_002.png?v=1754502759",
+    "description": "Wrap yourself up in the warmth of the Repleto Down Jacket while strolling colorful city blocks. This lightweight down jacket sheds light wind and snow, and the hand pockets are perfect for storing your phone, wallet, or gloves on gray fall days. A warm yet lightweight jacket for strolling through town. Packable.",
+    "bestseller": false
+  },
+  {
+    "id": 7552410517565,
+    "title": "Bacano Fleece Jacket - Men's",
+    "productType": "Outerwear",
+    "price": 87.5,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F24MBacanoFleeceJacketAtlanticandCarbon_120.png?v=1721168377",
+    "description": "Unmatched style and cozy warmth? The high-pile Bacano Fleece Jacket checks both boxes with a higher neckline, super soft fleece, and retro-inspired patchwork. Plus, the zippered hand pockets and interior drop-in pocket keep your essentials secure, making this fleece the perfect choice for chilly days on the go. A high-pile fleece for strolling around town or cozying up in the cabin.",
+    "bestseller": false
+  },
+  {
+    "id": 7803805171773,
+    "title": "Tempa Fleece Hooded Jacket - Men's",
+    "productType": "Outerwear",
+    "price": 50.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F25MTempaFleeceHoodedJacketFatigue_002.png?v=1754503935",
+    "description": "Nordic ski, snowshoe, hike, and more in the Tempa Fleece Hooded Jacket. We designed the sleeves to allow freedom of movement, while flatlock seams prevent chafing. Keep your essentials close in the zippered hand pockets, and stay fresh during your most active moments with a Polygiene® anti-odor finish. Your new winter adventure companion, made with recycled materials.",
+    "bestseller": false
+  },
+  {
+    "id": 7794703368253,
+    "title": "Capa Hybrid Insulated Hooded Jacket - Women's",
+    "productType": "Outerwear",
+    "price": 90.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F25WCapaHybridInsulatedHoodedJacketJamandFig_001.png?v=1754678888",
+    "description": "This jacket simplifies layering during brisk adventures. Its synthetic PrimaLoft® Gold P.U.R.E. (Produced Using Reduced Emissions) Insulation helps regulate your temperature, while stretch paneling in the sleeves and knit side panels make quick movements easy. Run, hike, and seek adventure in this movement-ready, hybrid layer. Packs inside its own interior chest pocket.",
     "bestseller": true
   },
   {
     "id": 7958386540605,
     "title": "Rayu Rain Jacket - Women's",
     "productType": "Outerwear",
-    "price": 75.00,
+    "price": 75.0,
     "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26WRayuRainJacketHuskandHoneydew_2634.png?v=1769098103",
-    "description": "A tried and true rain shell built for slick city streets, the Rayu Rain Jacket has you covered around town. With two zippered hand pockets and a cinchable hood, this fully waterproof shell has all the features you need and none that you don't.",
+    "description": "A tried and true rain shell built for slick city streets, the Rayu Rain Jacket has you covered around town. With two zippered hand pockets and a cinchable hood, this fully waterproof shell has all the features you need and none that you don’t.",
     "bestseller": true
   },
   {
-    "id": 7957759033405,
-    "title": "Sombra Sun Hoodie - Men's",
-    "productType": "Apparel",
-    "price": 52.50,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/s26-m-sombra-sun-hoodie-azure-01_d61bb38c-876f-458e-917b-5a22b2ee8344.png?v=1772062031",
-    "description": "A classic fit plus UPF 50+ sun protection makes the Sombra Sun Hoodie perfect for throwing over a t-shirt when high noon approaches. A sunny adventure staple with UPF 50+ protection.",
+    "id": 7761784471613,
+    "title": "Rayu Rain Parka - Women's",
+    "productType": "Outerwear",
+    "price": 140.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26WRayuRainParkaAsterandMoonbeam_0183_9d6bebd7-da4c-4ccb-b5f8-aa74f7374fad.png?v=1769099775",
+    "description": "Stroll city streets with confidence in the Rayu Rain Parka. This extended length rain shell is built with recycled polyester and a breathable mesh lining—it’s a fully waterproof design that repels spring showers without missing a step.",
+    "bestseller": false
+  },
+  {
+    "id": 7906645966909,
+    "title": "Impermeo 3L Hooded Shell Jacket - Men's",
+    "productType": "Outerwear",
+    "price": 135.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200_png-S26_M_Impermeo_3L_Hooded_Shell_Jacket_Malachite_01.png?v=1769192688",
+    "description": "Built for the unexpected, the Impermeo 3L Hooded Jacket is a burly shell for coastal hikes and summer thunderstorms alike. Fully seam-sealed, three-layer protection fights off the elements, while two-way stretch keeps you cruising along the trail. Built-in adjustability lets you dial the fit for maximum protection, and the whole thing packs into a pocket for easy storage when the sun pokes through. Afternoon storms are no match for our most technical trail shell.",
     "bestseller": true
   },
   {
     "id": 7958381920317,
     "title": "Pacaya Lite Hooded Jacket - Men's",
     "productType": "Outerwear",
-    "price": 72.00,
+    "price": 72.0,
     "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/s26-m-pacaya-lite-hooded-jacket-everglade-01.png?v=1772044398",
-    "description": "For spring wind and breezy summits, throw on the Pacaya Lite Hooded Jacket so you can fully enjoy the view. Built entirely from super lightweight recycled nylon, this breathes well on the way up, and offers protection when you need it.",
+    "description": "For spring wind and breezy summits, throw on the Pacaya Lite Hooded Jacket so you can fully enjoy the view. Built entirely from super lightweight recycled nylon, this breathes well on the way up, and offers protection when you need it. The internal sternum snap keeps the jacket on securely while unzipped to maximize airflow when you need to cool off on trail.",
     "bestseller": true
   },
   {
-    "id": 7958388310077,
-    "title": "Solta Long-Sleeve Sun Shirt - Men's",
-    "productType": "Sportswear",
-    "price": 51.00,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/s26-m-solta-long-sleeve-sun-shirt-husk-01.png?v=1772493709",
-    "description": "From desert hikes to dense rainforests, the Solta Long-Sleeve Sun Shirt is ready for a trip off the beaten path. With built-in UPF 50+ protection, quick-dry recycled nylon fabric, and back ventilation for breathability, this shirt keeps you comfortable wherever your trail leads.",
-    "bestseller": false
-  },
-  {
-    "id": 7958380544061,
-    "title": "Losdos Zip-Off Pant - Women's",
-    "productType": "Sportswear",
-    "price": 87.50,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26WLosdosZip-OffPantAzureandAster_1394.png?v=1769551545",
-    "description": "The mountains are unpredictable, which is why we love the versatility of the trail-ready Losdos Zip-Off Pants. Stretchy, moisture-wicking, with UPF 50+ protection. Zip off the legs to transform into four-inch shorts, and the zip-off bottoms pack into the cargo pockets for easy storage.",
+    "id": 7554354577469,
+    "title": "Teca Crop Jacket - Women's",
+    "productType": "Wind Jacket",
+    "price": 32.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S24WTecaWindbreakerCropJacketSaltFlats_4.png?v=1705009599",
+    "description": "This cropped jacket is a spin on our tried-and-true Teca Windbreaker that provides weather resistance without sacrificing mobility. Made with 100% repurposed polyester taffeta, the Teca Crop Jacket hits at the natural waistline for a relaxed yet flattering fit. A packable, weather-resistant, limited-edition layer, now in a cropped silhouette.",
     "bestseller": true
   },
   {
-    "id": 8011974213693,
-    "title": "Down Mitten",
-    "productType": "Apparel Accessories",
-    "price": 26.00,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F24DownMittenCarbon_LF.png?v=1756089799",
-    "description": "Get ready for the softest high fives ever, our Down Mitten features a cozy fleece lining and responsibly sourced down to keep your hands happy this winter. With a water-resistant exterior and elastic wrist binding, this mitten performs when snow starts falling, too.",
-    "bestseller": false
-  },
-  {
-    "id": 8021012971581,
-    "title": "Teca Fleece Beanie",
-    "productType": "Accessories",
-    "price": 10.00,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F25UTecaFleeceBeanieNutmegStripes_F.png?v=1755893322",
-    "description": "We took the coziness and resourcefulness of our bestselling Teca Fleece and turned it into a beanie for chillier days.",
-    "bestseller": false
-  },
-  {
-    "id": 7957726232637,
-    "title": "Todo 2L Hip Pack - Cada Día",
-    "productType": "Equipment",
-    "price": 35.00,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26UTodo2LHipPack-CadaDiaAster_F.png?v=1769357919",
-    "description": "Downtown, school, or trail, this hip pack is your outfit completer and trusty companion for it all. With a 2L main compartment and interior slip pocket, it fits all your necessities of life. Wear as a hip pack or cross body as a sling, designed for urban adventures, festivals, and hands-free exploration.",
+    "id": 7803691073597,
+    "title": "Sombra Sun Hoodie - Women's",
+    "productType": "Apparel",
+    "price": 52.5,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S24WSombraSunHoodieSmoke_2.png?v=1706806739",
+    "description": "A classic fit plus UPF 50+ sun protection makes the Sombra Sun Hoodie perfect for throwing over a tank top when high noon approaches. A sunny adventure staple with UPF 50+ protection.",
     "bestseller": true
-  },
-  {
-    "id": 7958396239933,
-    "title": "Todo Water Bottle Sling",
-    "productType": "Equipment",
-    "price": 31.50,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26UTodoWaterBottleSlingMalachiteandKale_A1.png?v=1769466241",
-    "description": "Throw the Todo Water Bottle Sling over your shoulder and enjoy endlessly hydrated adventures. This 2-liter crossbody sling keeps a 32oz water bottle within arms reach, with a front zippered pocket and back mesh pocket to stash a phone, snack, or sunnies. Adds versatility to hikes, city wandering, and outdoor concerts.",
-    "bestseller": false
-  },
-  {
-    "id": 7958395060285,
-    "title": "Tasra 16L Backpack",
-    "productType": "Equipment",
-    "price": 63.00,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26UTasra16LDaypackMoonbeamandAster_F.png?v=1769036513",
-    "description": "This feature-forward pack was designed with the minimalist traveler in mind. Spacious compartments, a full-wrap zippered opening, a variety of organizational pockets, and a padded laptop sleeve. The backpack straps tuck away to convert into a briefcase-style carry.",
-    "bestseller": true
-  },
-  {
-    "id": 7958395748413,
-    "title": "Tech Plus 5-Panel Hat",
-    "productType": "Apparel Accessories",
-    "price": 27.00,
-    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/s26-u-tech-plus-5-panel-hat-honeydew-and-husk-f.png?v=1771964264",
-    "description": "With our most technical trail hat yet, long hikes and trail runs are a breeze. Built with ultra-lightweight recycled polyester fabric and perforated sides for extra breathability. The unstructured design makes it easy to smush down and toss in a pack or pocket.",
-    "bestseller": false
   }
 ]
