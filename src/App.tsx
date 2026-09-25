@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar'
 import useProducts from './hooks/useProducts'
 import ProductGrid from './components/ProductGrid'
 import SelectionTray from './components/SelectionTray'
+import { getRecommendation, type Recommendation } from './lib/getRecommendation'
 
 const MAX_SELECTED = 3
 
@@ -12,6 +13,9 @@ function App() {
   const [query, setQuery] = useState('')
   const [selectedIds, setSelectedIds] = useState<Set<string | number>>(new Set())
   const [adventure, setAdventure] = useState('')
+  const [recommendation, setRecommendation] = useState<Recommendation | null>(null)
+  const [recLoading, setRecLoading] = useState(false)
+  const [recError, setRecError] = useState<string | null>(null)
   const abortRef = useRef<AbortController | null>(null)
 
   const filtered = useMemo(() => {
@@ -22,6 +26,24 @@ function App() {
       return hay.includes(q)
     })
   }, [products, query])
+
+  const selectedProducts = useMemo(
+    () => products.filter((p) => selectedIds.has(p.id)),
+    [products, selectedIds],
+  )
+
+  async function handleRecommend() {
+    setRecLoading(true)
+    setRecError(null)
+    try {
+      const result = await getRecommendation(selectedProducts, adventure)
+      setRecommendation(result)
+    } catch (err) {
+      setRecError(err instanceof Error ? err.message : 'Something went wrong.')
+    } finally {
+      setRecLoading(false)
+    }
+  }
 
   const handleToggle = useCallback((id: string | number) => {
     setSelectedIds((prev) => {
@@ -94,13 +116,14 @@ function App() {
       </main>
 
       <SelectionTray
-        items={Array.from(selectedIds).map((id) => {
-          const p = products.find((x) => x.id === id)
-          return { id, title: p?.title || String(id), image: p?.image }
-        })}
+        items={selectedProducts}
         max={MAX_SELECTED}
         adventure={adventure}
         onAdventureChange={setAdventure}
+        onRecommend={handleRecommend}
+        recommendation={recommendation}
+        loading={recLoading}
+        error={recError}
         onDeselect={handleDeselect}
       />
     </div>

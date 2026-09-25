@@ -1,3 +1,5 @@
+import type { Recommendation } from '../lib/getRecommendation'
+
 type Item = { id: string | number; title: string; image?: string }
 
 type Props = {
@@ -5,10 +7,24 @@ type Props = {
   max: number
   adventure: string
   onAdventureChange: (text: string) => void
+  onRecommend: () => void
+  recommendation: Recommendation | null
+  loading: boolean
+  error: string | null
   onDeselect: (id: string | number) => void
 }
 
-export default function SelectionTray({ items, max, adventure, onAdventureChange, onDeselect }: Props) {
+export default function SelectionTray({
+  items,
+  max,
+  adventure,
+  onAdventureChange,
+  onRecommend,
+  recommendation,
+  loading,
+  error,
+  onDeselect,
+}: Props) {
   if (!items.length) return null
   return (
     <aside className="selection-tray" aria-label="Selected products">
@@ -29,16 +45,42 @@ export default function SelectionTray({ items, max, adventure, onAdventureChange
             </li>
           ))}
         </ul>
-        <div className="adventure-field">
-          <label htmlFor="adventure-input">What's the adventure?</label>
-          <input
-            id="adventure-input"
-            type="text"
-            value={adventure}
-            onChange={(e) => onAdventureChange(e.target.value)}
-            placeholder="e.g. a rainy weekend hike, need to pack light"
-            autoComplete="off"
-          />
+        <form
+          className="adventure-form"
+          onSubmit={(e) => {
+            e.preventDefault()
+            onRecommend()
+          }}
+        >
+          <div className="adventure-field">
+            <label htmlFor="adventure-input">What's the adventure?</label>
+            <input
+              id="adventure-input"
+              type="text"
+              value={adventure}
+              onChange={(e) => onAdventureChange(e.target.value)}
+              placeholder="e.g. a rainy weekend hike, need to pack light"
+              autoComplete="off"
+            />
+          </div>
+          <button type="submit" className="btn" disabled={loading} aria-busy={loading}>
+            Recommend
+          </button>
+        </form>
+
+        <div aria-live="polite">
+          {error && (
+            <p className="rec-error" role="alert">
+              {error}
+            </p>
+          )}
+          {recommendation && !error && (
+            <div className="recommendation">
+              <span className="recommended-label">Recommended</span>
+              <p className="rec-title">{recommendation.product.title}</p>
+              <p className="rec-reason">{recommendation.reason}</p>
+            </div>
+          )}
         </div>
       </div>
     </aside>
