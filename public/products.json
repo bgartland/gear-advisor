@@ -106,5 +106,167 @@
     "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S24WSombraSunHoodieSmoke_2.png?v=1706806739",
     "description": "A classic fit plus UPF 50+ sun protection makes the Sombra Sun Hoodie perfect for throwing over a tank top when high noon approaches. A sunny adventure staple with UPF 50+ protection.",
     "bestseller": true
+  },
+  {
+    "id": 7922898894909,
+    "title": "Fuego Down Vest - Women's",
+    "productType": "Apparel",
+    "price": 74.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S24WFuegoDownVestCotopaxiCream_4.png?v=1721324499",
+    "description": "Blending responsibly sourced, water-resistant down with a streamlined design, the Fuego Down Vest is the perfect outer layer and midlayer in one. We love it for those in-between weather days that don’t quite warrant a jacket, and it’s also great as a core-warming layer under a shell for skiing. Packs into internal pocket.",
+    "bestseller": true
+  },
+  {
+    "id": 7784666955837,
+    "title": "Alivio Down Parka - Men's",
+    "productType": "Outerwear",
+    "price": 140.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F24MAlivioDownParkaCotopaxiBlack_002.png?v=1719961191",
+    "description": "Walking down Main Street, heading to the gym, having an après ski brew–stay warm wherever you go in the Alivio Down Parka. Its water-resistant shell protects you from the elements, and the internal zip chest pocket keeps your essentials safe. Plus, the adjustable hood and hem lock in warmth and allow for a perfect fit, making it the ultimate puffer for your day to day.",
+    "bestseller": true
+  },
+  {
+    "id": 7922074157117,
+    "title": "Repleto Down Parka - Men's",
+    "productType": "Outerwear",
+    "price": 275.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/f26-m-repleto-down-parka-cotopaxi-black-01-r.png?v=1789764487",
+    "description": "Wrap yourself up in the warmth of the Repleto Down Parka while strolling city blocks. This lightweight parka features some extra length at the hem to help shed light wind and snow, and the removable hood offers extra protection on chillier days.",
+    "bestseller": false
+  },
+  {
+    "id": 7782221807677,
+    "title": "Pacaya 2.0 Insulated Jacket - Women's",
+    "productType": "Outerwear",
+    "price": 97.5,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F25WPacaya2.0InsulatedJacketIceberg_001.png?v=1769555461",
+    "description": "Not too warm, not too cold—that’s the perfection the Pacaya 2.0 Insulated Jacket brings to chillier active days. This movement-friendly and breathable layer features a 100% recycled shell and recycled insulation made from pre-consumer wool scraps that regulates heat when you’re out exploring landscapes on ski or foot. It’s also an ideal layer under a waterproof shell on stormy days. Breathable layer featuring recycled insulation for cool-weather adventures.",
+    "bestseller": true
+  },
+  {
+    "id": 7677494394941,
+    "title": "Capa Insulated Vest - Men's",
+    "productType": "Insulation",
+    "price": 70.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S25MCapaInsulatedVestDrizzle_04.png?v=1731704833",
+    "description": "From winter wandering to fall hiking, the versatile Capa Vest is here for it all. Made with Primaloft® Gold P.U.R.E. (Produced Using Reduced Emissions) technology, 100% recycled synthetic insulation, this vest retains warmth even when wet. To keep you really comfortable in weather, it also features a windproof and water-resistant recycled nylon shell. Packable, breathable, warm, the Capa is great for layering when the temps drop.",
+    "bestseller": false
+  },
+  {
+    "id": 7695364587581,
+    "title": "Trico Hybrid Hooded Jacket - Men's",
+    "productType": "Outerwear",
+    "price": 70.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F25MTricoHybridHoodedJacketDeepSea_001.png?v=1755885072",
+    "description": "This hybrid layer has the coziness of high pile fleece and the warmth of an insulated vest, all in one versatile jacket. The Trico Jacket features quilted, 100% recycled synthetic insulation that provides an even distribution of warmth so the cold doesn’t get to you, but you don’t overheat either.",
+    "bestseller": false
+  },
+  {
+    "id": 7197400989757,
+    "title": "Teca Cálido Hooded Jacket - Men's",
+    "productType": "Apparel",
+    "price": 75.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200X1200jpeg-F22MTecaCalidoHoodedJacketSpaceStation_1387_4d517ffb-3a58-4885-bc06-f0790146e768.jpg?v=1705701470",
+    "description": "With recycled synthetic insulation and vibrant hues, the Teca Cálido Hooded Jacket keeps your core warm and your trail style strong. Elastic binding on the hood, hem, and cuffs keeps the warmth in, while two pockets keep your hands toasty. This reversible, responsibly made jacket is up for a variety of adventures. Packs into the chest pocket.",
+    "bestseller": true
+  },
+  {
+    "id": 7200122208317,
+    "title": "Salto Insulated Flannel Jacket - Men's",
+    "productType": "Insulation",
+    "price": 95.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F23MSaltoInsulatedFlannelJacketSaddlePlaid_12_46efcb06-a4ba-406b-ae61-c90ae12b9012.png?v=1706119896",
+    "description": "Reversible, insulated, and made with a boxy street-style silhouette, the Salto Insulated Flannel Jacket is bound to become your fall layering staple. With our Salto ripstop fabric on one side, and a cozy flannel on the other, this layer delivers two looks in one hearty shirt-jacket.",
+    "bestseller": false
+  },
+  {
+    "id": 7782699663421,
+    "title": "Abrazo Fleece Full-Zip Jacket - Women's",
+    "productType": "Fleece",
+    "price": 54.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-F25WAbrazoFleeceFull-ZipJacketFatigueandWoods_003-1.png?v=1755623542",
+    "description": "A cozy statement piece that embodies our commitment to sustainability, the Abrazo Fleece Full-Zip Fleece Jacket puts a Cotopaxi spin on the classic fleece with nature-inspired colorblocking and soft, fully recycled fleece. A cool-weather classic made with 100% recycled fleece.",
+    "bestseller": true
+  },
+  {
+    "id": 7906593767485,
+    "title": "Otero Fleece Half-Zip Pullover - Men's",
+    "productType": "Fleece",
+    "price": 72.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26MOteroFleeceHalf-ZipPulloverEverglade_2282_77d08d25-7401-4d68-8a0e-3a349fe7a21f.png?v=1769459075",
+    "description": "A fleece fit for movement, the Otero Half-Zip Pullover features a fitted silhouette, a recycled polyester blend, a raised grid back for more warmth and breathability, and concealed zippers. This technical fleece is great for cool weather hikes or other adventures.",
+    "bestseller": true
+  },
+  {
+    "id": 7449229000765,
+    "title": "Cielo Rain Anorak - Women's",
+    "productType": "Apparel",
+    "price": 77.5,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/products/1200x1200png-S23WCieloRainAnorakMaritime_SeaGlass_2.png?v=1706654155",
+    "description": "Throw on this eco-friendly anorak and go anywhere, rain or shine. It's not just the Cielo's design that makes it celestial—true to our Gear for Good promise, this rain jacket is made from PFC-free recycled materials, so you can stay dry on rainy days without unwanted chemicals.",
+    "bestseller": false
+  },
+  {
+    "id": 7906651635773,
+    "title": "Impermeo 3L Hooded Shell Jacket - Women's",
+    "productType": "Outerwear",
+    "price": 157.5,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26WImpermeo3LHoodedShellJacketHuskandHoneydew_1682.png?v=1769038276",
+    "description": "Built for the unexpected, the Impermeo 3L Hooded Jacket is a waterproof and windproof shell for coastal hikes and summer thunderstorms alike. Fully seam-sealed, three-layer protection fights off the elements, while two-way stretch keeps you cruising along the trail. Built-in adjustability lets you dial the fit for maximum protection, and the whole thing packs into a pocket for easy storage when the sun pokes through. Afternoon storms are no match for our most technical trail shell.",
+    "bestseller": true
+  },
+  {
+    "id": 7958386737213,
+    "title": "Rayu Rain Jacket - Men's",
+    "productType": "Outerwear",
+    "price": 75.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S26MRayuRainJacketSteelBlueandEverglade_01.png?v=1769462700",
+    "description": "A tried and true rain shell built for slick city streets, the Rayu Rain Jacket has you covered around town. With two zippered hand pockets and a cinchable hood, this fully waterproof shell has all the features you need and none that you don’t.",
+    "bestseller": false
+  },
+  {
+    "id": 7804224274493,
+    "title": "Yermo Hooded Jacket - Men's",
+    "productType": "Outerwear",
+    "price": 70.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/S25_M_Yermo_Hooded_Jacket_Moss_F.png?v=1769539183",
+    "description": "From windy summits to colorful fall jaunts, no adventure is too big or small for the Yermo Hooded Jacket. It’s built from a recycled fabric blend that prioritizes mobility while you scramble, walk, or jog. The soft brushed interior is cozy even if you’ve only got a t-shirt underneath, while four zippered pockets fit snacks and essentials for short adventures when you don’t want to bring a pack. A wilderness-ready softshell for adventures big and small.",
+    "bestseller": true
+  },
+  {
+    "id": 7804263137341,
+    "title": "Teca Half-Zip Windbreaker - Men's",
+    "productType": "Apparel",
+    "price": 40.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S25MTecaHalf-ZipWindbreakerFirefly_02.png?v=1731694402",
+    "description": "The Teca Windbreaker is ideal for windy ridge hikes, breezy bike rides, and minimalist travel. Plus, this windbreaker is made from unique repurposed materials, which means each one is limited edition. A packable, weather-resistant, and limited-edition layer.",
+    "bestseller": true
+  },
+  {
+    "id": 7552149159997,
+    "title": "Vuelta Performance Windbreaker Jacket - Women's",
+    "productType": "Apparel",
+    "price": 65.0,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/1200x1200png-S24WVueltaPerformanceWindbreakerJacketOrchidBloom_3.png?v=1723569956",
+    "description": "Lightweight enough to keep on hand and convenient enough to pack away, the Vuelta Performance Windbreaker’s back panel vents and power mesh interior boost breathability, while its cinched hood and small stash pocket round out this essentialist, timeless design. A lightweight, packable windbreaker for the trail or mountain.",
+    "bestseller": true
+  },
+  {
+    "id": 7957759033405,
+    "title": "Sombra Sun Hoodie - Men's",
+    "productType": "Apparel",
+    "price": 52.5,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/s26-m-sombra-sun-hoodie-azure-01_d61bb38c-876f-458e-917b-5a22b2ee8344.png?v=1772062031",
+    "description": "A classic fit plus UPF 50+ sun protection makes the Sombra Sun Hoodie perfect for throwing over a t-shirt when high noon approaches. A sunny adventure staple with UPF 50+ protection.",
+    "bestseller": true
+  },
+  {
+    "id": 7958393716797,
+    "title": "Sombra Long-Sleeve Sun Shirt - Women's",
+    "productType": "Apparel",
+    "price": 45.5,
+    "image": "https://cdn.shopify.com/s/files/1/0281/7544/files/s26-w-sombra-long-sleeve-sun-shirt-honeydew-1397.png?v=1772060574",
+    "description": "Lightweight fabric and UPF 50+ sun protection makes the Sombra Sun Shirt perfect for throwing over a tank top when high noon approaches.",
+    "bestseller": true
   }
 ]

@@ -9,10 +9,16 @@ import type { Product } from './hooks/useProducts'
 
 const MAX_SELECTED = 3
 
+// Apostrophes are dropped so "womens" finds "Women's" (the feed uses both ' and ’).
+const normalize = (s: string) => s.toLowerCase().replace(/['’]/g, '')
+
 function matchesQuery(p: Product, query: string): boolean {
-  const q = query.trim().toLowerCase()
+  const q = normalize(query.trim())
   if (!q) return true
-  return [p.title, p.productType, p.description].filter(Boolean).join(' ').toLowerCase().includes(q)
+  const text = normalize([p.title, p.productType, p.description].filter(Boolean).join(' '))
+  // Match from the start of a word, so "men" doesn't also match inside "women".
+  const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return new RegExp(`\\b${escaped}`).test(text)
 }
 
 function App() {
@@ -63,11 +69,8 @@ function App() {
 
   function handleQueryChange(next: string) {
     setQuery(next)
-    // keep selected items that still match the new search; drop the rest
-    setSelectedIds((prev) => {
-      const kept = new Set(products.filter((p) => prev.has(p.id) && matchesQuery(p, next)).map((p) => p.id))
-      return kept.size === prev.size ? prev : kept
-    })
+    // The tray is a comparison list the shopper builds while browsing, so picks stay
+    // put across searches. The recommendation still clears: it was made for the old search.
     resetRecommendation()
   }
 

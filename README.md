@@ -23,10 +23,12 @@ There's no backend, API key, or environment setup. The product data is a static 
 ## Using it
 
 1. **Search** matches on the product name, type, and description, so "waterproof" finds shells
-   even when the name doesn't say it.
+   even when the name doesn't say it. It matches from the start of a word and ignores
+   apostrophes, so "womens" finds women's products and "mens" doesn't pull them in too.
 2. **Select** up to 3 products by clicking a card (or tabbing to it and pressing Enter). They show
    up in a tray at the bottom, where you can remove them one at a time or hit **Clear all** to
-   start over.
+   start over. Your picks stay in the tray while you keep searching, so you can compare
+   products from different searches.
 3. **Describe the adventure** in the tray, for example *"a rainy weekend hike, need to pack light"*,
    and press **Recommend**.
 4. You get one pick, with its photo and a reason that says what it's good for and why it beat the
@@ -45,7 +47,7 @@ purpose, so you can see the loading and retry states. If it fails, click **Try a
 ## Project structure
 
 ```
-public/products.json            the 12 curated Cotopaxi products
+public/products.json            30 curated Cotopaxi jackets and layers
 src/
   App.tsx                       page state: search, selection, recommendation
   hooks/useProducts.ts          loads products, with loading / error / retry
@@ -61,14 +63,16 @@ src/
 
 ## Data
 
-`public/products.json` has 12 real products from Cotopaxi's public product feed, simplified to
+`public/products.json` has 30 real products from Cotopaxi's public product feed, simplified to
 what the UI needs: name, type, price, image, description, and whether it's a bestseller. The live
 feed blocks requests from the browser (CORS), so I saved a sample, which the assignment allows.
 
 I kept it to **jackets and layers** on purpose. My first sample mixed packs, beanies, and pants,
 and comparing a hip pack to a beanie doesn't give anyone a useful recommendation. Within one
-category there's still real variety: down and fleece for warmth, rain shells, packable
-windbreakers, and a sun hoodie.
+category there's still real variety: down and synthetic insulation, fleece, rain shells, packable
+windbreakers, and sun layers. The feed has about 90 distinct jackets and layers. I picked 30 that
+cover every need with a mix of prices, styles, and bestsellers, and trimmed their descriptions
+down to Cotopaxi's own product copy.
 
 In a real product I'd generate this from the live feed with a small transform function instead of
 hand-picking a snapshot, so it stays in sync with the actual catalog. I also dropped sizes and

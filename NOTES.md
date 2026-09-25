@@ -100,9 +100,12 @@ it shows a smaller slice of the store.
   screen. It's readable, but a collapsible tray would be better.
 - **Live data.** Replace the hand-picked product file with a transform over the real feed.
 
-**Time spent:** about an hour and a half. The extra time went into switching the catalog to one
-category, fixing the recommendation matching after testing it with real prompts, and some final
-polish.
+**Time spent:** about an hour and a half, including some follow-ups after the timebox. The extra
+time in the main build went into switching the catalog to one category, fixing the recommendation
+matching after testing it with real prompts, and some final polish. The follow-ups came from
+testing the finished app: expanding the catalog from 12 to 30 products, keeping selected products
+in the tray across searches, and fixing search so "womens" finds women's products and "men"
+doesn't match "women".
 
 ## Debugging question
 
